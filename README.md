@@ -6,9 +6,9 @@ Maker Media GmbH
 
 # Fischertechnik mit der Oxocard steuern
 
-### Mit unseren Umbauideen wird aus einer normalen Tischkreissäge eine Fräs-Sagekombination.
+### Über die Oxocard lässt sich mit wenig Aufwand eine leistungsstarke Steuerung für Fischertechnik-Modelle entwickeln.
 
-Platznot ist ein chronisches Problem in vielen Bastelräumen. Zum Glück wird aus einer Tischkreissäge schnell und günstig ein universaler Fräs- und Sägetisch.
+Fischertechnik hat mit den „Maker-Kits“ eine Produktlinie eingeführt, deren offenes System darauf baut, Basismodelle durch individuelle Ergänzungen zu bereichern.
 
 ![Picture](https://github.com/MakeMagazinDE/Oxocard_steuert_Fischertechnik/blob/master/Titelbild.jpg) 
 
