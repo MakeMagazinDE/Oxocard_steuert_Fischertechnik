@@ -1,0 +1,54 @@
+const AIN1 = C_PIN_01       # AIN1 Pin connected to IO01
+const AIN2 = C_PIN_02       # AIN2 Pin connected to IO02
+const PWMA = C_PIN_03       # Motor PWMA signal connected to IO03
+const ENCODER = C_PIN_07    # Motor encoder on IN07
+
+const MIN_DUTY_CYCLE = 0
+const MAX_DUTY_CYCLE = 4095
+
+initGPIO(AIN1, OUTPUT)
+initGPIO(AIN2, OUTPUT)
+initPulseCounter(ENCODER)
+setPWMFrequency(1000)       # default: 500 Hz
+setPrecision(2)
+
+speed = 50                  # Geschwindigkeit: 0..100 (Startwert: 50)
+direction = "stop"          # Bewegungsrichtung: "left", "right", "stop"
+const STEP = 10
+
+background(0,0,0)
+textFont(FONT_ROBOTO_24)
+
+def onDraw():
+    dutyCycle = map(speed, 0, 100, MIN_DUTY_CYCLE, MAX_DUTY_CYCLE)
+    writePWM(PWMA, dutyCycle)
+    impulses = readPulseCounter(ENCODER)
+    clear()                 # output speed and direction on display
+    drawText(10, 10, "Speed: " + speed)
+    drawText(10, 40, "Direction: " + direction)
+    drawText(10, 70, "Turns: " + impulses/63.33)
+    update()
+    delay(50)
+
+def onClick(): 
+    b = getButton()         # direction and speed control with joystick
+    if b == 2:              # up: faster
+        speed = min(speed + STEP, 100)
+        resetPulseCounter(ENCODER)
+    if b == 4:              # down: slower
+        speed = max(speed - STEP, 0)
+        resetPulseCounter(ENCODER)
+    if b == 3:              # right: turn motor clockwise
+        writeGPIO(AIN1, 0) # LOW / OFF
+        writeGPIO(AIN2, 1) # HIGH / ON
+        direction = "right"
+        resetPulseCounter(ENCODER)
+    if b == 5:             # left: turn motor anticlockwise
+        writeGPIO(AIN1, 1) # HIGH / ON
+        writeGPIO(AIN2, 0) # LOW / OFF
+        direction = "left"
+        resetPulseCounter(ENCODER)
+    if b == 1:             # middle: turn motor off
+        writeGPIO(AIN1, 0) # LOW / OFF
+        writeGPIO(AIN2, 0) # LOW / OFF
+        direction = "stop"
