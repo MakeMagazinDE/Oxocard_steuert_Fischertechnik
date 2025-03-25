@@ -10,6 +10,6 @@ Maker Media GmbH
 
 Platznot ist ein chronisches Problem in vielen Bastelräumen. Zum Glück wird aus einer Tischkreissäge schnell und günstig ein universaler Fräs- und Sägetisch.
 
-![Picture](https://github.com/MakeMagazinDE/Oxocard_steuert_Fischertechnik/blob/master/Titel.jpg) 
+![Picture](https://github.com/MakeMagazinDE/Oxocard_steuert_Fischertechnik/blob/master/Titelbild.jpg) 
 
 Den vollständigen Artikel mit der Bauanleitung gibt es in der [Make-Ausgabe 2/25 ab Seite 74](https://www.heise.de/select/make/2025/2/2434509012428585539).
