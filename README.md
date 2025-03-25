@@ -6,7 +6,7 @@ Maker Media GmbH
 
 # Fischertechnik mit der Oxocard steuern
 
-### Über die Oxocard lässt sich mit wenig Aufwand eine leistungsstarke Steuerung für Fischertechnik-Modelle entwickeln.
+### Über die Oxocard lässt sich eine leistungsstarke Steuerung für Fischertechnik-Modelle entwickeln.
 
 Fischertechnik hat mit den „Maker-Kits“ eine Produktlinie eingeführt, deren offenes System darauf baut, Basismodelle durch individuelle Ergänzungen zu bereichern.
 
